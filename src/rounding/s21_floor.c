@@ -1,9 +1,9 @@
-#include "s21_math.h"
+#include "../s21_math.h"
 
 long double s21_floor(double x) {
   long double res;
 
-  if (x == 0 || s21_is_inf(x) || s21_is_nan(x)) {
+  if (x == 0 || S21_ISINF(x) || S21_ISNAN(x)) {
     res = x;
   } else {
     long long int tmp = x;

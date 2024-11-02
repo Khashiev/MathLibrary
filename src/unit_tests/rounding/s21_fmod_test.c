@@ -1,4 +1,4 @@
-#include "s21_math_test.h"
+#include "../common_test.h"
 
 START_TEST(fmod_test1) {
   double x = 12.0;
@@ -70,8 +70,8 @@ START_TEST(fmod_test10) {
 }
 END_TEST
 
-Suite *suite_fmod(void) {
-  Suite *s = suite_create("suite_fmod");
+Suite *s21_fmod_suite() {
+  Suite *s = suite_create("s21_fmod");
   TCase *tc = tcase_create("fmod_tc");
 
   tcase_add_test(tc, fmod_test1);

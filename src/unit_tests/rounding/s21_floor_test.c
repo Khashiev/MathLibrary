@@ -1,4 +1,4 @@
-#include "s21_math_test.h"
+#include "../common_test.h"
 
 START_TEST(floor_test1) {
   double x = 1.0;
@@ -60,8 +60,8 @@ START_TEST(floor_test10) {
 }
 END_TEST
 
-Suite *suite_floor(void) {
-  Suite *s = suite_create("suite_floor");
+Suite *s21_floor_suite() {
+  Suite *s = suite_create("s21_floor");
   TCase *tc = tcase_create("floor_tc");
 
   tcase_add_test(tc, floor_test1);

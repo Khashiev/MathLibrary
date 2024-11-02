@@ -1,4 +1,4 @@
-#include "s21_math_test.h"
+#include "../common_test.h"
 
 START_TEST(fabs_test1) { ck_assert_ldouble_eq(s21_fabs(1.0), fabs(1.0)); }
 END_TEST
@@ -38,8 +38,8 @@ START_TEST(fabs_test10) {
 }
 END_TEST
 
-Suite *suite_fabs(void) {
-  Suite *s = suite_create("suite_fabs");
+Suite *s21_fabs_suite() {
+  Suite *s = suite_create("s21_fabs");
   TCase *tc = tcase_create("fabs_tc");
 
   tcase_add_test(tc, fabs_test1);
